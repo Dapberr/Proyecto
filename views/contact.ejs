@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contacto</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body class="contact-page">
+    <main>
+      <section class="hero">
+        <div class="container">
+          <p class="eyebrow">Contacta con nosotros</p>
+          <h1>Hablemos de tu próximo proyecto</h1>
+          <p>
+            Estamos aquí para responder tus dudas, ayudarte a definir tus metas y
+            crear soluciones digitales que realmente impacten a tu negocio.
+          </p>
+        </div>
+      </section>
+
+      <section class="contact-section">
+        <div class="container contact-grid">
+          <aside class="info-card">
+            <h2>Información de contacto</h2>
+            <ul class="contact-list">
+              <li>
+                <div class="icon">📍</div>
+                <div>
+                  <strong>Dirección</strong>
+                  <p>Calle Principal 123, Madrid, España</p>
+                </div>
+              </li>
+              <li>
+                <div class="icon">📞</div>
+                <div>
+                  <strong>Teléfono</strong>
+                  <p>+34 600 123 456</p>
+                </div>
+              </li>
+              <li>
+                <div class="icon">✉️</div>
+                <div>
+                  <strong>Email</strong>
+                  <p>hola@empresa.com</p>
+                </div>
+              </li>
+              <li>
+                <div class="icon">🕒</div>
+                <div>
+                  <strong>Horario</strong>
+                  <p>Lunes a Viernes: 9:00 - 18:00</p>
+                </div>
+              </li>
+            </ul>
+
+            <div class="socials">
+              <a href="#" aria-label="Facebook">f</a>
+              <a href="#" aria-label="Instagram">◎</a>
+              <a href="#" aria-label="LinkedIn">in</a>
+            </div>
+          </aside>
+
+          <div class="form-card">
+            <h2>Envíanos un mensaje</h2>
+            <form action="/contact" method="POST">
+              <div class="field-row">
+                <label>
+                  Nombre
+                  <input type="text" name="name" placeholder="Tu nombre" required />
+                </label>
+                <label>
+                  Email
+                  <input type="email" name="email" placeholder="tuemail@ejemplo.com" required />
+                </label>
+              </div>
+
+              <div class="field-row">
+                <label>
+                  Teléfono
+                  <input type="tel" name="phone" placeholder="Tu teléfono" />
+                </label>
+                <label>
+                  Asunto
+                  <input type="text" name="subject" placeholder="Asunto del mensaje" required />
+                </label>
+              </div>
+
+              <label>
+                Mensaje
+                <textarea name="message" placeholder="Cuéntanos brevemente en qué podemos ayudarte..." required></textarea>
+              </label>
+
+              <button type="submit">Enviar mensaje</button>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
