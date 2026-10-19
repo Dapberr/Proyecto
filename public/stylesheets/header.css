@@ -24,10 +24,19 @@
 .home-page .main-nav {
   display: flex;
   align-items: center;
-  gap: 1.5rem;
 }
 
-.home-page .main-nav a {
+.home-page .main-nav-list {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.home-page .main-nav a,
+.home-page .nav-dropdown summary {
   color: var(--color-navigation);
   font-weight: 600;
   text-decoration: none;
@@ -35,8 +44,57 @@
 }
 
 .home-page .main-nav a:hover,
-.home-page .main-nav a:focus-visible {
+.home-page .main-nav a:focus-visible,
+.home-page .nav-dropdown summary:hover,
+.home-page .nav-dropdown summary:focus-visible {
   color: var(--color-navigation-hover);
+}
+
+.home-page .nav-dropdown {
+  position: relative;
+}
+
+.home-page .nav-dropdown summary {
+  cursor: pointer;
+  list-style: none;
+}
+
+.home-page .nav-dropdown summary::-webkit-details-marker {
+  display: none;
+}
+
+.home-page .nav-dropdown summary::after {
+  display: inline-block;
+  margin-left: 0.4rem;
+  content: "⌄";
+}
+
+.home-page .dropdown-menu {
+  position: absolute;
+  top: calc(100% + 0.75rem);
+  left: 50%;
+  z-index: 1;
+  min-width: 12rem;
+  margin: 0;
+  padding: 0.5rem;
+  transform: translateX(-50%);
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  background: var(--color-page);
+  box-shadow: 0 10px 24px color-mix(in srgb, var(--color-primary) 12%, var(--color-transparent));
+  list-style: none;
+}
+
+.home-page .dropdown-menu a {
+  display: block;
+  padding: 0.65rem 0.8rem;
+  border-radius: 4px;
+  white-space: nowrap;
+}
+
+.home-page .dropdown-menu a:hover,
+.home-page .dropdown-menu a:focus-visible {
+  background: var(--color-secondary);
 }
 
 .home-page .header-cta {
@@ -60,7 +118,8 @@
 }
 
 .home-page .header-cta:focus-visible,
-.home-page .main-nav a:focus-visible {
+.home-page .main-nav a:focus-visible,
+.home-page .nav-dropdown summary:focus-visible {
   outline: 3px solid var(--color-focus);
   outline-offset: 4px;
 }
@@ -75,7 +134,11 @@
   .home-page .main-nav {
     width: 100%;
     justify-content: center;
+  }
+
+  .home-page .main-nav-list {
     flex-wrap: wrap;
+    justify-content: center;
     gap: 0.8rem 1.25rem;
   }
 
