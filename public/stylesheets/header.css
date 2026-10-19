@@ -8,14 +8,14 @@
   gap: 1rem;
   min-height: 76px;
   padding: 1rem clamp(1.25rem, 6vw, 5.5rem);
-  border-bottom: 1px solid rgba(220, 229, 218, 0.9);
-  background: rgba(250, 251, 247, 0.92);
-  box-shadow: 0 8px 28px rgba(26, 54, 38, 0.05);
+  border-bottom: 1px solid color-mix(in srgb, var(--color-border) 90%, var(--color-transparent));
+  background: color-mix(in srgb, var(--color-page) 92%, var(--color-transparent));
+  box-shadow: 0 8px 28px color-mix(in srgb, var(--color-primary) 5%, var(--color-transparent));
   backdrop-filter: blur(14px);
 }
 
 .home-page .brand {
-  color: #173c31;
+  color: var(--color-primary);
   font-size: clamp(1.1rem, 2vw, 1.35rem);
   font-weight: 750;
   text-decoration: none;
@@ -28,7 +28,7 @@
 }
 
 .home-page .main-nav a {
-  color: #40584d;
+  color: var(--color-navigation);
   font-weight: 600;
   text-decoration: none;
   transition: color 180ms ease;
@@ -36,7 +36,7 @@
 
 .home-page .main-nav a:hover,
 .home-page .main-nav a:focus-visible {
-  color: #d45d3c;
+  color: var(--color-navigation-hover);
 }
 
 .home-page .header-cta {
@@ -46,8 +46,8 @@
   min-height: 44px;
   padding: 0.7rem 1.2rem;
   border-radius: 6px;
-  background: #173c31;
-  color: #fff;
+  background: var(--color-primary);
+  color: var(--color-white);
   font-weight: 700;
   text-decoration: none;
   transition: background-color 180ms ease, transform 180ms ease;
@@ -56,12 +56,12 @@
 .home-page .header-cta:hover,
 .home-page .header-cta:focus-visible {
   transform: translateY(-1px);
-  background: #285b48;
+  background: var(--color-primary-hover);
 }
 
 .home-page .header-cta:focus-visible,
 .home-page .main-nav a:focus-visible {
-  outline: 3px solid #e99563;
+  outline: 3px solid var(--color-focus);
   outline-offset: 4px;
 }
 
