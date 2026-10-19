@@ -1,28 +1,8 @@
+@import url(var.css);
 @import url(header.css);
 @import url(footer.css);
 
 :root {
-  --color-primary: #173c31;
-  --color-primary-hover: #285b48;
-  --color-ink: #172b27;
-  --color-page: #f7f8f3;
-  --color-white: #fff;
-  --color-transparent: transparent;
-  --color-secondary: #eef3e9;
-  --color-border: #dce5d8;
-  --color-muted: #607168;
-  --color-navigation: #40584d;
-  --color-navigation-hover: #d45d3c;
-  --color-accent: #c95e3e;
-  --color-accent-dark: #bb583b;
-  --color-focus: #e99563;
-  --color-highlight: #f2ad7e;
-  --color-input: #fafbf8;
-  --color-hero-copy: #c1cbe0;
-  --color-hero-accent: #c4d3ff;
-  --color-hero-overlay: #081123;
-  --color-cyan: #68e0dd;
-  color-scheme: light;
   font-family: "Trebuchet MS", "Segoe UI", sans-serif;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
