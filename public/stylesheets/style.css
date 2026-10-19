@@ -1,3 +1,6 @@
+@import url(header.css);
+@import url(footer.css);
+
 :root {
   color-scheme: light;
   font-family: "Trebuchet MS", "Segoe UI", sans-serif;
@@ -28,67 +31,6 @@ body {
   background:
     radial-gradient(ellipse at 50% 0, rgba(228, 239, 226, 0.75), transparent 58%),
     #f7f8f3;
-}
-
-.home-page .site-header {
-  position: sticky;
-  top: 0;
-  z-index: 10;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 1rem;
-  min-height: 76px;
-  padding: 1rem clamp(1.25rem, 6vw, 5.5rem);
-  border-bottom: 1px solid rgba(220, 229, 218, 0.9);
-  background: rgba(250, 251, 247, 0.92);
-  box-shadow: 0 8px 28px rgba(26, 54, 38, 0.05);
-  backdrop-filter: blur(14px);
-}
-
-.home-page .brand {
-  color: #173c31;
-  font-size: clamp(1.1rem, 2vw, 1.35rem);
-  font-weight: 750;
-  text-decoration: none;
-}
-
-.home-page .main-nav {
-  display: flex;
-  align-items: center;
-  gap: 1.5rem;
-}
-
-.home-page .main-nav a {
-  color: #40584d;
-  font-weight: 600;
-  text-decoration: none;
-  transition: color 180ms ease;
-}
-
-.home-page .main-nav a:hover,
-.home-page .main-nav a:focus-visible {
-  color: #d45d3c;
-}
-
-.home-page .header-cta {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 44px;
-  padding: 0.7rem 1.2rem;
-  border-radius: 6px;
-  background: #173c31;
-  color: #fff;
-  font-weight: 700;
-  text-decoration: none;
-  transition: background-color 180ms ease, transform 180ms ease;
-}
-
-.home-page .header-cta:hover,
-.home-page .header-cta:focus-visible {
-  transform: translateY(-1px);
-  background: #285b48;
 }
 
 .home-page .hero {
@@ -211,9 +153,7 @@ body {
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.22);
 }
 
-.home-page .hero-cta:focus-visible,
-.home-page .header-cta:focus-visible,
-.home-page .main-nav a:focus-visible {
+.home-page .hero-cta:focus-visible {
   outline: 3px solid #e99563;
   outline-offset: 4px;
 }
@@ -297,59 +237,6 @@ body {
   width: 100%;
   height: 100%;
   object-fit: cover;
-}
-
-.home-page footer {
-  padding: 2.5rem 1.5rem;
-  background: #173c31;
-  color: #dce5d8;
-  text-align: center;
-}
-
-.home-page .footer-content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1.25rem;
-  width: min(100%, 1100px);
-  margin: 0 auto;
-}
-
-.home-page .footer-brand {
-  color: #fff;
-  font-size: 1.25rem;
-  font-weight: 750;
-  text-decoration: none;
-}
-
-.home-page .footer-nav {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0.75rem;
-}
-
-.home-page .footer-nav a {
-  color: #dce5d8;
-  text-decoration: none;
-  transition: color 180ms ease;
-}
-
-.home-page .footer-nav a:hover,
-.home-page .footer-nav a:focus-visible {
-  color: #f2ad7e;
-}
-
-.home-page .footer-brand:focus-visible,
-.home-page .footer-nav a:focus-visible {
-  outline: 2px solid #f2ad7e;
-  outline-offset: 4px;
-}
-
-.home-page .footer-copyright {
-  margin: 0;
-  font-size: 0.875rem;
-  line-height: 1.6;
 }
 
 .contact-page {
@@ -617,23 +504,6 @@ body {
 }
 
 @media (max-width: 640px) {
-  .home-page .site-header {
-    flex-wrap: wrap;
-    justify-content: center;
-    padding: 1rem;
-  }
-
-  .home-page .main-nav {
-    width: 100%;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 0.8rem 1.25rem;
-  }
-
-  .home-page .header-cta {
-    margin-top: 0.25rem;
-  }
-
   .home-page .hero-content {
     min-height: 460px;
     border-radius: 8px;
