@@ -76,12 +76,24 @@
           <a href="/contact">Solicitar acceso</a>
           <a href="#cookie-panel" class="cookie-link" aria-expanded="false" aria-controls="cookie-panel">Cookies</a>
         </nav>
-        <section class="cookie-panel" id="cookie-panel" aria-label="Preferencias de cookies" hidden>
-          <details class="cookie-details">
-            <summary>¿Qué cookies utilizamos?</summary>
-            <p>Utilizamos cookies necesarias para que este sitio funcione correctamente. No usamos cookies de publicidad ni compartimos tus datos con terceros.</p>
-          </details>
-          <button class="cookie-accept" type="button">Aceptar cookies</button>
+        <section class="cookie-panel" id="cookie-panel" role="dialog" aria-modal="true" aria-labelledby="cookie-title" hidden>
+          <div class="cookie-dialog">
+            <h2 id="cookie-title">Información sobre cookies</h2>
+            <p>Las cookies son pequeños archivos que los sitios web pueden guardar en tu navegador para recordar información entre visitas. Este panel es informativo: al pulsar «Aceptar» solo se cerrará y no se guardarán preferencias.</p>
+            <details class="cookie-details">
+              <summary>Ver más información sobre las cookies</summary>
+              <div class="cookie-information">
+                <h3>Tipos de cookies</h3>
+                <p><strong>Cookies técnicas:</strong> permiten funciones básicas y necesarias para que un sitio web se muestre y funcione correctamente.</p>
+                <p><strong>Cookies de preferencias:</strong> recuerdan elecciones como el idioma o la configuración visual para personalizar futuras visitas.</p>
+                <p><strong>Cookies de análisis:</strong> ayudan a conocer de forma agregada cómo se utiliza un sitio y qué contenidos resultan más útiles.</p>
+                <p><strong>Cookies publicitarias:</strong> pueden utilizarse para mostrar anuncios según la actividad de navegación.</p>
+                <h3>Cómo gestionarlas</h3>
+                <p>Puedes consultar, borrar o bloquear cookies desde la configuración de privacidad de tu navegador. Si bloqueas algunas cookies, ciertas funciones de los sitios web podrían no estar disponibles.</p>
+              </div>
+            </details>
+            <button class="cookie-accept" type="button">Aceptar</button>
+          </div>
         </section>
         <p class="footer-copyright">© 2026 <%= title %>. Todos los derechos reservados.</p>
       </div>

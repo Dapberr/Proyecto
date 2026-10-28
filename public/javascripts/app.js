@@ -43,12 +43,29 @@ if (cookieLink && cookiePanel && cookieDetails && cookieAcceptButton) {
         event.preventDefault();
         cookiePanel.hidden = false;
         cookieLink.setAttribute('aria-expanded', 'true');
-        cookieDetails.open = true;
+        cookieDetails.open = false;
+        cookieDetails.querySelector('summary').focus();
     });
 
     cookieAcceptButton.addEventListener('click', () => {
         cookiePanel.hidden = true;
         cookieLink.setAttribute('aria-expanded', 'false');
         cookieLink.focus();
+    });
+
+    cookiePanel.addEventListener('click', (event) => {
+        if (event.target === cookiePanel) {
+            cookiePanel.hidden = true;
+            cookieLink.setAttribute('aria-expanded', 'false');
+            cookieLink.focus();
+        }
+    });
+
+    document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape' && !cookiePanel.hidden) {
+            cookiePanel.hidden = true;
+            cookieLink.setAttribute('aria-expanded', 'false');
+            cookieLink.focus();
+        }
     });
 }

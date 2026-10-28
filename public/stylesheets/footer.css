@@ -51,15 +51,16 @@
 }
 
 .home-page .cookie-panel {
+  position: fixed;
+  z-index: 1000;
+  inset: 0;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  gap: 1rem;
-  width: min(100%, 38rem);
-  padding: 1.25rem;
-  border: 1px solid var(--color-border);
-  border-radius: 0.75rem;
-  background: var(--color-primary-hover);
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  padding: 2rem;
+  background: rgb(0 0 0 / 65%);
   text-align: left;
 }
 
@@ -67,13 +68,65 @@
   display: none;
 }
 
+.home-page .cookie-dialog {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  width: min(100%, 58rem);
+  max-height: 90vh;
+  overflow-y: auto;
+  padding: 2.5rem;
+  border: 1px solid var(--color-border);
+  border-radius: 0.75rem;
+  background: var(--color-primary);
+  color: var(--color-border);
+  box-shadow: 0 1.5rem 4rem rgb(0 0 0 / 35%);
+}
+
+.home-page .cookie-dialog h2,
+.home-page .cookie-information h3 {
+  margin: 0;
+  color: var(--color-white);
+}
+
+.home-page .cookie-dialog > p {
+  margin: 0;
+  line-height: 1.7;
+}
+
 .home-page .cookie-details {
   width: 100%;
+  padding: 1.25rem;
+  border: 1px solid var(--color-border);
+  border-radius: 0.5rem;
+  background: var(--color-primary-hover);
 }
 
 .home-page .cookie-details summary {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
   cursor: pointer;
   font-weight: 700;
+  list-style: none;
+}
+
+.home-page .cookie-details summary::-webkit-details-marker {
+  display: none;
+}
+
+.home-page .cookie-details summary::before {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-right: 2px solid currentColor;
+  border-bottom: 2px solid currentColor;
+  content: "";
+  transform: rotate(-45deg);
+  transition: transform 180ms ease;
+}
+
+.home-page .cookie-details[open] summary::before {
+  transform: rotate(45deg);
 }
 
 .home-page .cookie-details p {
@@ -81,7 +134,23 @@
   line-height: 1.6;
 }
 
+.home-page .cookie-information {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding-top: 1rem;
+}
+
+.home-page .cookie-information h3:not(:first-child) {
+  margin-top: 0.75rem;
+}
+
+.home-page .cookie-information p {
+  margin: 0;
+}
+
 .home-page .cookie-accept {
+  align-self: flex-end;
   padding: 0.65rem 1rem;
   border: 0;
   border-radius: 0.4rem;
@@ -94,6 +163,17 @@
 
 .home-page .cookie-accept:hover {
   background: var(--color-border);
+}
+
+@media (max-width: 40rem) {
+  .home-page .cookie-panel {
+    padding: 1rem;
+  }
+
+  .home-page .cookie-dialog {
+    max-height: 95vh;
+    padding: 1.5rem;
+  }
 }
 
 .home-page .footer-copyright {
