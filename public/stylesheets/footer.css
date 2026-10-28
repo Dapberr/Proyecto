@@ -7,8 +7,10 @@
 
 .home-page .footer-content {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  flex-wrap: wrap;
   align-items: center;
+  justify-content: space-between;
   gap: 1.25rem;
   width: min(100%, 1100px);
   margin: 0 auto;
@@ -23,7 +25,8 @@
 
 .home-page .footer-nav {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  flex-wrap: wrap;
   align-items: center;
   gap: 0.75rem;
 }
